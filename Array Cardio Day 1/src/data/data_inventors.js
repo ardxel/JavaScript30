@@ -1,4 +1,4 @@
-export default inventors = [
+const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
     { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
     { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
@@ -12,3 +12,5 @@ export default inventors = [
     { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
     { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
   ];
+
+export default inventors;
