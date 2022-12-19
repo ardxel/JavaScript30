@@ -35,37 +35,48 @@ function totalYears() {
         return total + (inventor.passed - inventor.year);
     }, 0)
 }
-export {totalYears as original4};
+export { totalYears as original4 };
+
 // 5. Sort the inventors by years lived
-const oldest = inventors.sort(function (a, b) {
-    const lastInventor = a.passed - a.year;
-    const nextInventor = b.passed - b.year;
-    return lastInventor > nextInventor ? -1 : 1;
-});
+function oldest() {
+    return this.sort(function (a, b) {
+        const lastInventor = a.passed - a.year;
+        const nextInventor = b.passed - b.year;
+        return lastInventor > nextInventor ? -1 : 1;
+    });
+}
+export { oldest as original5 };
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
-// const category = document.querySelector('.mw-category');
-// const links = Array.from(category.querySelectorAll('a'));
-// const de = links
-//             .map(link => link.textContent)
-//             .filter(streetName => streetName.includes('de'));
+function listContainsDe() {
+    const category = document.querySelector('.mw-category');
+    const links = Array.from(category.querySelectorAll('a'));
+    return links
+        .map(link => link.textContent)
+        .filter(streetName => streetName.includes('de'));
+}
+export {listContainsDe as original6};
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
-const alpha = people.sort((lastOne, nextOne) => {
-    const [aLast, aFirst] = lastOne.split(', ');
-    const [bLast, bFirst] = nextOne.split(', ');
-    return aLast > bLast ? 1 : -1;
-});
-
+function alpha() {
+    return this.sort((lastOne, nextOne) => {
+        const [aLast, aFirst] = lastOne.split(', ');
+        const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
+    });
+}
+export {alpha as original7};
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-const transportation = data.reduce(function (obj, item) {
-    if (!obj[item]) {
-        obj[item] = 0;
-    }
-    obj[item]++;
-    return obj;
-}, {});
+function transportation() {
+    return this.reduce(function (obj, item) {
+        if (!obj[item]) {
+            obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+    }, {});
+}
+export {transportation as original8};

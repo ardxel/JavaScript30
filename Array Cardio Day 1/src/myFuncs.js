@@ -31,18 +31,42 @@ function totalLiveInventors() {
         return prev += (cur.passed - cur.year);
     }, 0)
 }
-export {totalLiveInventors as myFunc4};
+export { totalLiveInventors as myFunc4 };
+
 // 5. Sort the inventors by years lived
-const sortOldToYoungInv = inventors.sort((a, b) => {
-    return (b.passed - b.year) - (a.passed - a.year);
-})
+function sortOldToYoungInv() {
+    return this.sort((a, b) => {
+        return (b.passed - b.year) - (a.passed - a.year);
+    })
+}
+export { sortOldToYoungInv as myFunc5 };
+
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+function listContainsDe() {
 
-
+}
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+function sortByLastName() {
+    return this.sort((a, b) => {
+        b[0] > a[0];
+    })
+}
+export {sortByLastName as myFunc7};
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-
+function reduceExercise() {
+    const calc = {};
+    this.forEach(tr => {
+        if (!calc[tr]) {
+            calc[tr] = 1;
+        } else {
+            calc[tr] += 1;
+        }
+    })
+    return calc;
+}
+export {reduceExercise as myFunc8};
+console.log(reduceExercise.call(data));
