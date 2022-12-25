@@ -20,10 +20,7 @@ body {
 }
 
 #container {
-    /* width: 500px;
-    max-width: 1000px;
-    height: 100px; */
-    margin: 500px auto 0px;
+    margin: 500px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
