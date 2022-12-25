@@ -4,7 +4,7 @@ import { inventors, data, people } from "./data.js";
 // 1. Filter the list of inventors for those who were born in the 1500's
 function oldInventors() {
     return this.filter(inventor => inventor.year >= 1501 && inventor.year <= 1601)
-};
+}
 export { oldInventors as myFunc1 };
 
 // Array.prototype.map()
@@ -28,7 +28,7 @@ export { sortInventors as myFunc3 }
 // 4. How many years did all the inventors live all together?
 function totalLiveInventors() {
     return this.reduce((prev, cur) => {
-        return prev += (cur.passed - cur.year);
+        return prev + (cur.passed - cur.year);
     }, 0)
 }
 export { totalLiveInventors as myFunc4 };
