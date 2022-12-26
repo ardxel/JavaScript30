@@ -1,6 +1,59 @@
 body {
     display: flex;
+    background-color: #ffc600;
 }
 #container {
     margin: 100px auto 0;
+}
+
+#form {
+ display: flex;
+    flex-direction: column;
+}
+
+#input__search {
+    width: 400px;
+    height: 85px;
+    font-size: 36px;
+    text-align: center;
+    border: 10px solid #f8f2f2;
+    border-radius: 10px;
+    box-shadow: 1px 4px 5px -1px rgba(0, 0, 0, 0.23);
+    padding: 0;
+    margin: 0;
+}
+
+#input__search:focus {
+    outline: none;
+}
+
+#list {
+    margin: 0 auto;
+    position: relative;
+    top: -2.5px;
+}
+
+#list > li {
+    width: 350px;
+    height: 35px;
+    background-color: white;
+    box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.23);
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#list li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+}
+
+#list li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+.hl {
+    color: #ffc600;
 }
