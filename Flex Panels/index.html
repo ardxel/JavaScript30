@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../reset.css">
+    <title>Flex Panels</title>
+    <style>
+        #main {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #main > div {
+            /*width: calc(100vw / 5);*/
+            width: 100%;
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div1 {
+            background: black;
+        }
+        #div2 {
+            background: red;
+        }
+        #div3 {
+            background: blue;
+        }
+        #div4 {
+            background: white;
+        }
+        #div5 {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+body {
+    display: flex;
+}
+#container {
+    margin: 100px auto 0;
+}
