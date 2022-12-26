@@ -43,6 +43,7 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    text-transform: capitalize;
 }
 #list li:nth-child(even) {
     transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
